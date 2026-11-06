@@ -6,31 +6,32 @@
 [ext_resource type="PackedScene" uid="uid://datq0y32cvc31" path="res://scenes/player/inimigo.tscn" id="4_4ortr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cdpwx"]
-size = Vector2(24, 20)
+size = Vector2(42.600002, 20)
 
 [node name="Fase01" type="Node2D" unique_id=2141838334]
 script = ExtResource("1_48725")
 
 [node name="Player" parent="." unique_id=1447816590 instance=ExtResource("1_04o6e")]
-position = Vector2(55, 429)
+position = Vector2(55, 557)
 
 [node name="Chao" type="StaticBody2D" parent="." unique_id=882285980]
-position = Vector2(15, 200)
+position = Vector2(15, 356)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Chao" unique_id=1879804897]
-position = Vector2(350, 270)
+position = Vector2(629, 270)
 scale = Vector2(30, 1)
 shape = SubResource("RectangleShape2D_cdpwx")
 
 [node name="ColorRect" type="ColorRect" parent="Chao" unique_id=1462792926]
 offset_left = -11.0
 offset_top = 260.0
-offset_right = 13.000002
+offset_right = 31.766666
 offset_bottom = 282.0
 scale = Vector2(30, 1)
 color = Color(0.20875, 0.20875, 0.20875, 1)
+metadata/_edit_use_anchors_ = true
 
 [node name="HUD" parent="." unique_id=101759343 instance=ExtResource("3_4ortr")]
 
 [node name="Inimigo" parent="." unique_id=491248277 instance=ExtResource("4_4ortr")]
-position = Vector2(378, 443)
+position = Vector2(378, 577)

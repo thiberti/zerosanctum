@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://bxpo54bk0odym"]
 
 [ext_resource type="Script" uid="uid://bch3vaqmlvoji" path="res://scripts/player/player.gd" id="1_dovo2"]
-[ext_resource type="Texture2D" uid="uid://cgx4uxvlnok52" path="res://icon.svg" id="2_dovo2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ksdio"]
 size = Vector2(2.8, 2.1333334)
@@ -13,9 +12,8 @@ size = Vector2(2, 1)
 collision_layer = 2
 script = ExtResource("1_dovo2")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=211975077]
-scale = Vector2(0.4375, 0.5)
-texture = ExtResource("2_dovo2")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1033505603]
+position = Vector2(0, -6)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1945716262]
 position = Vector2(-1.1920929e-06, 1.7881393e-06)
@@ -27,17 +25,9 @@ collision_layer = 0
 collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreaAtaque" unique_id=2127169580]
-position = Vector2(52.000004, 0)
+position = Vector2(0, -6)
 scale = Vector2(24, 20)
 shape = SubResource("RectangleShape2D_5604n")
-
-[node name="VisualAtaque" type="ColorRect" parent="AreaAtaque" unique_id=1608909572]
-offset_left = 29.0
-offset_top = -10.0
-offset_right = 76.0
-offset_bottom = 10.0
-mouse_filter = 2
-color = Color(1, 1, 1, 0.8)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=89270656]
 position = Vector2(0, -73)
