@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://crdvbhgphddym"]
+
+[ext_resource type="Script" uid="uid://catn20x6isfr5" path="res://scripts/player/hud.gd" id="1_c4vmg"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u0ka6"]
+bg_color = Color(0.101960786, 0.101960786, 0.101960786, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ksdio"]
+bg_color = Color(0.8, 0.12156863, 0.12156863, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b4max"]
+bg_color = Color(0.101960786, 0.101960786, 0.101960786, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5604n"]
+bg_color = Color(1, 0.8, 0, 1)
+
+[node name="HUD" type="CanvasLayer" unique_id=101759343]
+script = ExtResource("1_c4vmg")
+
+[node name="Margem" type="MarginContainer" parent="." unique_id=414843041]
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+
+[node name="Barras" type="VBoxContainer" parent="Margem" unique_id=191968442]
+layout_mode = 2
+
+[node name="BarraVitalidade" type="ProgressBar" parent="Margem/Barras" unique_id=198412966]
+layout_mode = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_u0ka6")
+theme_override_styles/fill = SubResource("StyleBoxFlat_ksdio")
+value = 100.0
+
+[node name="BarraEnergia" type="ProgressBar" parent="Margem/Barras" unique_id=1019490220]
+layout_mode = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_b4max")
+theme_override_styles/fill = SubResource("StyleBoxFlat_5604n")
+value = 100.0

@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://datq0y32cvc31"]
+
+[ext_resource type="Script" uid="uid://y1ecw3w3st71" path="res://scripts/player/inimigo.gd" id="1_8vadm"]
+[ext_resource type="Texture2D" uid="uid://cgx4uxvlnok52" path="res://icon.svg" id="2_yp1sf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cdpwx"]
+size = Vector2(26, 26)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ksdio"]
+size = Vector2(32, 29)
+
+[node name="Inimigo" type="CharacterBody2D" unique_id=491248277]
+collision_layer = 4
+script = ExtResource("1_8vadm")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=640498302]
+modulate = Color(0.6901961, 0.1882353, 0.1882353, 1)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_yp1sf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=358885966]
+shape = SubResource("RectangleShape2D_cdpwx")
+
+[node name="RayCast2D" type="RayCast2D" parent="." unique_id=1113543720]
+target_position = Vector2(0, 20)
+
+[node name="AreaDano" type="Area2D" parent="." unique_id=1995441212]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaDano" unique_id=1337377246]
+position = Vector2(0, -1.5)
+shape = SubResource("RectangleShape2D_ksdio")
