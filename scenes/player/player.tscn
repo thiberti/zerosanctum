@@ -1,23 +1,40 @@
 [gd_scene format=3 uid="uid://bxpo54bk0odym"]
 
 [ext_resource type="Script" uid="uid://bch3vaqmlvoji" path="res://scripts/player/player.gd" id="1_dovo2"]
+[ext_resource type="Texture2D" uid="uid://4vl8cion07ob" path="res://assets/sprites/player/zero_sheet.png" id="2_dovo2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gmlin"]
+atlas = ExtResource("2_dovo2")
+region = Rect2(0, 0, 118, 68)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8afob"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gmlin")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ksdio"]
-size = Vector2(2.8, 2.1333334)
+size = Vector2(40, 112)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5604n"]
-size = Vector2(2, 1)
+size = Vector2(96, 112)
 
 [node name="Player" type="CharacterBody2D" unique_id=1447816590]
 collision_layer = 2
 script = ExtResource("1_dovo2")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1033505603]
-position = Vector2(0, -6)
+position = Vector2(0, -12)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_8afob")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1945716262]
 position = Vector2(-1.1920929e-06, 1.7881393e-06)
-scale = Vector2(20, 30)
 shape = SubResource("RectangleShape2D_ksdio")
 
 [node name="AreaAtaque" type="Area2D" parent="." unique_id=1882950915]
@@ -25,8 +42,7 @@ collision_layer = 0
 collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreaAtaque" unique_id=2127169580]
-position = Vector2(0, -6)
-scale = Vector2(24, 20)
+position = Vector2(0, 4.000002)
 shape = SubResource("RectangleShape2D_5604n")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=89270656]

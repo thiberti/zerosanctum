@@ -17,7 +17,7 @@ signal forma_mudou(nova_forma: Forma)
 @export_group("Ataque e Transformação")
 @export var dano_ataque: float = 10.0
 @export var duracao_ataque: float = 0.25
-@export var alcance_ataque: float = 36.0
+@export var alcance_ataque: float = 72.0
 @export var custo_transformacao: float = 30.0
 @export var duracao_transformacao: float = 8.0
 @export var tempo_invulneravel: float = 0.8
